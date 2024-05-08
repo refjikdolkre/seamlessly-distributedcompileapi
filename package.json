@@ -1,0 +1,32 @@
+{
+  "version": "0.0.10",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "tsc",
+    "start": "node index.js",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "postinstall": "husky install",
+    "test-sample": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cache-manager-redis-store": "2",
+    "eslint-config-prettier": "^9.0.0",
+    "express-basic-auth": "^1.2.1",
+    "@nestjs/axios": "^3.0.1",
+    "@nestjs/platform-express": "^10.0.0",
+    "puppeteer": "21.6.1",
+    "@types/jest": "^29.5.2",
+    "@nestjs/bull": "^10.1.1",
+    "bignumber.js": "^9.1.2",
+    "dotenv": "^16.4.5",
+    "@aptos-labs/ts-sdk": "^1.9.1"
+  }
+}
