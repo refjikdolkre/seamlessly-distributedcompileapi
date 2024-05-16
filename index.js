@@ -1,18 +1,4 @@
-function permute(nums) {
-  const result = [];
-  backtrack([]);
-  return result;
-  function backtrack(permutation) {
-    if (permutation.length === nums.length) {
-      result.push([...permutation]);
-      return;
-    }
-    for (const num of nums) {
-      if (!permutation.includes(num)) {
-        permutation.push(num);
-        backtrack(permutation);
-        permutation.pop();
-      }
-    }
-  }
-}
+const dropRightWhile = (arr, func) => {
+  while (arr.length > 0 && !func(arr[arr.length - 1])) arr = arr.slice(0, -1);
+  return arr;
+};
